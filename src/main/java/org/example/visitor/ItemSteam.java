@@ -1,5 +1,5 @@
 package org.example.visitor;
 
 public interface ItemSteam {
-    void Aceitar (Visitor visitor);
+    float aceitar (Visitor visitor);
 }

@@ -1,7 +1,7 @@
 package org.example.visitor;
 
 public interface Visitor {
-    void CalcularImpostoParaJogo(Jogo jogo);
-    void CalcularImpostoParaSkin(Skin skin);
-    void CalcularImpostoParaSoundtrack(Soundtrack Soundtrack);
+    float calcularImpostoParaJogo(Jogo jogo);
+    float calcularImpostoParaSkin(Skin skin);
+    float calcularImpostoParaSoundtrack(Soundtrack Soundtrack);
 }
