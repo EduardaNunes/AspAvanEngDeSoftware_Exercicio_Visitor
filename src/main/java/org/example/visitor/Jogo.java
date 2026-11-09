@@ -2,16 +2,10 @@ package org.example.visitor;
 
 public class Jogo implements ItemSteam{
 
-    private String nome;
     private int preco;
 
-    public Jogo(String nome, int preco){
-        this.nome = nome;
+    public Jogo(int preco){
         this.preco = preco;
-    }
-
-    public String getNome() {
-        return nome;
     }
 
     public int getPreco() {
@@ -19,7 +13,7 @@ public class Jogo implements ItemSteam{
     }
 
     @Override
-    public void Aceitar(Visitor visitor) {
-
+    public float aceitar(Visitor visitor) {
+        return visitor.calcularImpostoParaJogo(this);
     }
 }

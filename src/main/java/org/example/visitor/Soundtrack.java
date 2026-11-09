@@ -2,16 +2,10 @@ package org.example.visitor;
 
 public class Soundtrack implements ItemSteam{
 
-    private String nome;
     private int preco;
 
-    public Soundtrack(String nome, int preco){
-        this.nome = nome;
+    public Soundtrack(int preco){
         this.preco = preco;
-    }
-
-    public String getNome() {
-        return nome;
     }
 
     public int getPreco() {
@@ -19,7 +13,7 @@ public class Soundtrack implements ItemSteam{
     }
 
     @Override
-    public void Aceitar(Visitor visitor) {
-
+    public float aceitar(Visitor visitor) {
+        return visitor.calcularImpostoParaSoundtrack(this);
     }
 }
